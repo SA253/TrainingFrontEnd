@@ -4,11 +4,11 @@ import { HttpClient } from '@angular/common/http';
 
 export class ServiceProvider {
     constructor(
-        public id: string,
-        public name: string,
-        public fname: string,
-        public lname: string,
-        public email: string,
+        public userID: string,
+        public username: string,
+        public firstName: string,
+        public lastName: string,
+        public emailId: string,
         public companyName: string,
         public password: string,
     ) { }
@@ -17,10 +17,19 @@ export class ServiceProvider {
 @Injectable({
     providedIn: 'root'
 })
+
 export class SignUpService {
     constructor(private httpClient: HttpClient) { }
 
     public createServiceProvider(sp) {
-        return this.httpClient.post<ServiceProvider>('http://localhost:8001/ServiceProviders', sp);
+        return this.httpClient.post<ServiceProvider>("http://localhost:8001/ServiceProviders", sp);
+    }
+
+    // public deleteServiceProvider(sp){
+    //     return this.httpClient.delete<ServiceProvider>("http://localhost:8001/ServiceProviders" )
+    // }
+
+    public findSP(name){
+        return this.httpClient.get<ServiceProvider>("http://localhost:8001/ServiceProviders/" + name);
     }
 }

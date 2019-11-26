@@ -8,10 +8,15 @@ import { SignUpService, ServiceProvider} from '../HelperServices/signupService'
 })
 export class Signup1Component implements OnInit {
 
-  sp: ServiceProvider;
+  sp: ServiceProvider = new ServiceProvider("","","","","","","");
   constructor(private signupservice: SignUpService) { }
 
   ngOnInit() {
   }
+
+  createServiceProvider():void{
+    console.log(this.sp)
+    this.signupservice.createServiceProvider(this.sp).subscribe(data=>{alert("Service Provider is Created!!");});
+  };
 
 }

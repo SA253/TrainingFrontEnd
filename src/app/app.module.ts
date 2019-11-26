@@ -8,6 +8,8 @@ import { Signup1Component } from './signup1/signup1.component';
 import { Signup2Component } from './signup2/signup2.component';
 import { SigninComponent } from './signin/signin.component';
 import { ServicesComponent } from './services/services.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ServicesComponent } from './services/services.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
