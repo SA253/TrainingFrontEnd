@@ -97,83 +97,27 @@
 
     <!-- MAIN -->
     <div class="content">
-        <div *ngIf=""
-            <div class="col-md-6">
-                <div class="card">
-                    <img class="card-img-top" src="src\assets\images\books.jpg" style="height:20rem;"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Company Name</h5>
-                        <p class="card-text">Description: We provide Tshirt and Mugs</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card" style="width: 28rem; height: 30rem; padding: 20px;  margin: 20px;">
-                    <img class="card-img-top" src="src\assets\images\books.jpg" style="height:20rem;"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Company Name</h5>
-                        <p class="card-text">Description: We provide Tshirt and Mugs</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
+        <div *ngIf="services != null">
 
-        
+            <div *ngFor="let s of services">
+                <div class="card-deck">
 
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card" style="width: 28rem; height: 30rem; padding: 20px; margin: 20px; ">
-                    <img class="card-img-top" src="src\assets\images\books.jpg" style="height:20rem;"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Company Name</h5>
-                        <p class="card-text">Description: We provide Tshirt and Mugs</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+
+
+                    <div class="card">
+                        <img class="card-img-top" src="src\assets\images\books.jpg" style="height:20rem;"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{s.svcName}}</h5>
+                            <p class="card-text">{{s.desc}}</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card" style="width: 28rem; height: 30rem; padding: 20px;  margin: 20px;">
-                    <img class="card-img-top" src="src\assets\images\books.jpg" style="height:20rem;"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Company Name</h5>
-                        <p class="card-text">Description: We provide Tshirt and Mugs</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
+
             </div>
 
         </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card" style="width: 28rem; height: 30rem; padding: 20px; margin: 20px; ">
-                    <img class="card-img-top" src="src\assets\images\books.jpg" style="height:20rem;"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Company Name</h5>
-                        <p class="card-text">Description: We provide Tshirt and Mugs</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card" style="width: 28rem; height: 30rem; padding: 20px;  margin: 20px;">
-                    <img class="card-img-top" src="src\assets\images\books.jpg" style="height:20rem;"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Company Name</h5>
-                        <p class="card-text">Description: We provide Tshirt and Mugs</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-
-    </div><!-- Main Col END -->
+    </div>
+    <!-- <div fxLayout="row" fxLayoutAlign="start center"> -->
+</div><!-- Main Col END -->
